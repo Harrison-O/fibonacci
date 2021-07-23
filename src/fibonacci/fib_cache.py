@@ -1,13 +1,11 @@
 from functools import cache
 import time
 
-N = 100_000
-
-def main():
+def run_fib(n: int = 100_000):
 
     print("Calculating Fibonacci numbers...")
 
-    for i in range(N):
+    for i in range(n):
         begin = time.time_ns()
         res = fib(i)
         end = time.time_ns()
@@ -25,4 +23,4 @@ def fib(n):
         return fib(n - 1) + fib(n - 2)
 
 if __name__ == "__main__":
-    main()
+    run_fib()
